@@ -550,6 +550,113 @@ button {
   display: none;
 }
 
+.testimonial {
+  padding: clamp(50px, 3.125rem + 40px, 100px);
+}
+.testimonial__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 1.875rem + 14px, 50px);
+}
+.testimonial__text p {
+  margin-top: 20px;
+}
+.testimonial__swiper {
+  max-width: 1190px;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.testimonial__swiper-container {
+  position: relative;
+}
+.testimonial__swiper-button-next, .testimonial__swiper-button-prev {
+  position: absolute;
+  height: 45px;
+  width: 45px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.testimonial__swiper-button-next svg > path, .testimonial__swiper-button-prev svg > path {
+  fill: #3396CE;
+}
+.testimonial__swiper-button-next.swiper-button-disabled, .testimonial__swiper-button-prev.swiper-button-disabled {
+  cursor: default;
+}
+.testimonial__swiper-button-next.swiper-button-disabled svg > path, .testimonial__swiper-button-prev.swiper-button-disabled svg > path {
+  fill: #C4C4C4;
+}
+.testimonial__swiper-button-next {
+  transform: rotate(180deg);
+  right: 0;
+}
+.testimonial__swiper-pagination {
+  position: absolute;
+  bottom: 30px !important;
+  left: unset !important;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  position: static;
+}
+.testimonial__swiper-pagination .swiper-pagination-bullet {
+  width: 25px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 0;
+  margin: 0 !important;
+  opacity: 1 !important;
+}
+.testimonial__swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #F48919;
+}
+.testimonial__swiper-pagination .swiper-pagination-bullet {
+  background-color: #C4C4C4;
+}
+.testimonial__swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #F48919;
+}
+.testimonial__img-wrapper {
+  position: relative;
+}
+.testimonial__img-wrapper > img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+.testimonial__img-wrapper::before {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+  backdrop-filter: blur(1px);
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: zoom-in;
+}
+.testimonial__img-wrapper::after {
+  content: "";
+  position: absolute;
+  background-image: url("../images/magnifier.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30px;
+  height: 30px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.3s;
+  z-index: 100;
+}
+.testimonial__img-wrapper:hover::before, .testimonial__img-wrapper:hover::after {
+  opacity: 1;
+}
+
 .popup {
   display: none;
   position: fixed;

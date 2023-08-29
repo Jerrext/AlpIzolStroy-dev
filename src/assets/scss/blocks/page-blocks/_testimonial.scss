@@ -1,0 +1,68 @@
+.testimonial {
+  padding: $vertical-padding;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $margin-h2;
+  }
+
+  &__text {
+    p {
+      margin-top: 20px;
+    }
+  }
+
+  &__swiper {
+    max-width: 1190px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+
+    &-container {
+      position: relative;
+    }
+
+    &-button-next,
+    &-button-prev {
+      position: absolute;
+      height: 45px;
+      width: 45px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      svg > path {
+        fill: $link-color-light;
+      }
+
+      &.swiper-button-disabled {
+        cursor: default;
+        svg > path {
+          fill: #C4C4C4;
+        }
+      }
+    }
+
+    &-button-next {
+      transform: rotate(180deg);
+      right: 0;
+    }
+
+    &-pagination {
+      @include pagination();
+      position: static;
+
+      .swiper-pagination-bullet {
+        background-color: #C4C4C4;
+
+        &-active {
+          background-color: $color-orange-dark;
+        }
+      }
+    }
+  }
+
+  &__img-wrapper {
+    @include hoverImg();
+  }
+}

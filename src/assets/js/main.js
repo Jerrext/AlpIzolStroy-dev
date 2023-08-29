@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     galleryBtnsWrapper.style.display = "none"
   }
-  
 
   const certificatesBtnsWrapper = document.querySelector(".certificates__btns-wrapper")
   const certificatesBtnMore = document.querySelector(".certificates__btn-more")
@@ -58,12 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
   }
-
-  
-
-  window.addEventListener("resize", () => {
-    
-  })
 })
 
 const swiper1 = new Swiper('.banner__swiper', {
@@ -82,9 +75,26 @@ const swiper1 = new Swiper('.banner__swiper', {
       return `<span class="${className}"></span>`;
     },
   },
-  // fadeEffect: {
-  //   crossFade: true
-  // },
+});
+
+const swiper2 = new Swiper('.testimonial__swiper', {
+  slidesPerView: 5,
+  spaceBetween: 30,
+  simulateTouch: false,
+  autoplay: {
+    delay: 5000,
+  },
+  pagination: {
+    el: ".testimonial__swiper-pagination",
+    clickable: true,
+    renderBullet: function (index, className) {
+      return `<span class="${className}"></span>`;
+    },
+  },
+  navigation: {
+    nextEl: ".testimonial__swiper-button-next",
+    prevEl: ".testimonial__swiper-button-prev",
+  },
 });
 
 const overflowToggle = (arg) => {
@@ -139,6 +149,15 @@ document.querySelectorAll(".gallery__grid-item").forEach(item => {
 })
 
 document.querySelectorAll(".certificates__grid-item").forEach(item => {
+  item.addEventListener("click", () => {
+    const imgSrs = item.firstElementChild.src
+    const img = document.querySelector(".popup-view__img")
+    img.src = imgSrs.replace(".jpg", "-large.jpg")
+    setPopUpVisibility(true, popupView, popupViewImg, overlayView)
+  })
+})
+
+document.querySelectorAll(".testimonial__img-wrapper").forEach(item => {
   item.addEventListener("click", () => {
     const imgSrs = item.firstElementChild.src
     const img = document.querySelector(".popup-view__img")
