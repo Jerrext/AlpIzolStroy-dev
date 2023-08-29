@@ -1,0 +1,53 @@
+.services {
+  padding: $margin-h2 0 $vertical-padding;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: clamp(20px,0.25rem + 19.2px,24px);
+  }
+  
+  &__item {
+    border: 1px solid #BCBCBC;
+    padding: clamp(20px,1.25rem + 16px,40px) clamp(10px,1.875rem + 4px,40px);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(10px,0.625rem + 8px,20px);
+    position: relative;
+
+    p {
+      max-width: 549px;
+    }
+
+    h3 {
+      padding-right: 50px;
+      transition: $transition;
+    }
+
+    &::before {
+      content: attr(data-number);
+      position: absolute;
+      right: clamp(10px,0.625rem + 8px,20px);
+      top: 0;
+      width: clamp(40px,1.875rem + 34px,70px);
+      display: flex;
+      justify-content: center;
+      font-weight: 400;
+      font-family: $font-days-one;
+      font-size: clamp(50px,2.5rem + 42px,90px);
+      color: $color-orange-dark;
+      line-height: 1.2em;
+      transition: $transition;
+    }
+
+    &:hover {
+      h3 {
+        color: $link-color-dark;
+      }
+
+      &::before {
+        color: $color-orange-light;
+      }
+    }
+  }
+}

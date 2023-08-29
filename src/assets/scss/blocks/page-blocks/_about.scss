@@ -1,0 +1,13 @@
+.about {
+  padding-top: clamp(60px,5rem + 44px,140px);
+
+  &__wrapper {
+    display: flex;
+    gap: 82px;
+  }
+
+  p {
+    max-width: 641px;
+    margin-top: 12px;
+  }
+}

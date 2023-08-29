@@ -1,0 +1,48 @@
+.certificates {
+  padding: $vertical-padding 0;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+  }
+
+  &__left {
+    margin-top: 114px;
+
+    p {
+      margin-top: 20px;
+      max-width: 494px;
+    }
+
+    .btn {
+      margin-top: $margin-h2;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 757px;
+    width: 100%;
+    gap: $margin-h2;
+  }
+
+  &__grid-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(10px,1.25rem + 6px,30px);
+  }
+
+  &__grid {
+    @include grid(repeat(4, 1fr));
+  
+
+    &:nth-child(-n + 2) {
+      display: grid;
+    }
+  }
+
+  @include button2();
+}

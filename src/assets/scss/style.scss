@@ -1,0 +1,36 @@
+@import 'reset';
+@import 'fonts';
+@import 'mixins';
+
+:root {
+  font-family: $font-open-sans;
+  scroll-behavior: smooth;
+  font-size: 1vw;
+  font-weight: 400;
+}
+
+body {
+  background-color: #fff;
+}
+
+.btn {
+  @include button();
+}
+
+h2 {
+  @include h2();
+}
+
+h3 {
+  @include h3();
+}
+
+p {
+  @include p();
+}
+
+button {
+  font-family: $font-open-sans;
+}
+
+@import 'blocks/modules';

@@ -1,0 +1,42 @@
+.banner {
+  position: relative;
+
+  &__swiper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    &-pagination {
+     @include pagination();
+    }
+
+    .swiper-slide {
+      padding: clamp(174px,10.2rem + 141.3px,274px) 0 clamp(211px,4.5rem + 196.6px,283px);
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(40px,1.25rem + 36px,60px);
+
+    h1, h2 {
+      @include h1()
+    }
+  }
+}

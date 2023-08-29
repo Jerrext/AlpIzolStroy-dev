@@ -1,0 +1,25 @@
+.gallery {
+  padding: $vertical-padding 0;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $margin-h2;
+  }
+
+  &__grid-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(10px,1.25rem + 6px,30px);
+  }
+
+  &__grid {
+    @include grid(repeat(4, 1fr));
+
+    &:first-child {
+      display: grid;
+    }
+  }
+
+  @include button2();
+}
