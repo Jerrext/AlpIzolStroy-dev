@@ -168,3 +168,12 @@ document.querySelectorAll(".testimonial__img-wrapper").forEach(item => {
 
 document.querySelector(".popup-view__close").addEventListener("click", () => setPopUpVisibility(false, popupView, popupViewImg, overlayView))
 overlayView.addEventListener("click", () => setPopUpVisibility(false, popupView, popupViewImg, overlayView))
+
+const popupCall = document.querySelector(".popup-call")
+const popupCallWrapper = document.querySelector(".popup-call__wrapper")
+const overlayCall = document.querySelector(".popup-call__overlay")
+
+document.querySelector(".header__controls-top-phones-btn").addEventListener("click", () => setPopUpVisibility(true, popupCall, popupCallWrapper, overlayCall))
+
+document.querySelector(".popup-call__close").addEventListener("click", () => setPopUpVisibility(false, popupCall, popupCallWrapper, overlayView))
+overlayCall.addEventListener("click", () => setPopUpVisibility(false, popupCall, popupCallWrapper, overlayView))

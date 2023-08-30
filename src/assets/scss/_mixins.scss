@@ -123,6 +123,22 @@
   }
 }
 
+@mixin input() {
+  border: 1px solid #BCBCBC;
+  width: 100%;
+  height: clamp(40px,1.25rem + 36px,60px);
+  font-size: clamp(12px,0.125rem + 11.6px,14px);
+  padding: 0 20px;
+  resize: none;
+  outline: none;
+
+  &::placeholder {
+    font-family: $font-open-sans;
+    color: #828282;
+    font-size: clamp(12px,0.125rem + 11.6px,14px);
+  }
+}
+
 @mixin grid($gc) {
   display: none;
   grid-template-columns: $gc;
@@ -154,6 +170,13 @@
   font-size: clamp(18px,0.375rem + 16.8px,24px);
   color: $link-color;
   text-transform: uppercase;
+}
+
+@mixin h4() {
+  font-family: $font-open-sans;
+  font-weight: 600;
+  font-size: clamp(18px,0.25rem + 17.2px,22px);
+  color: #111111;
 }
 
 @mixin p($tc: $text-color-1) {

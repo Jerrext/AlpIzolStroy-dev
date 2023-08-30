@@ -1,0 +1,56 @@
+.contacts {
+  padding: clamp(50px,4.375rem + 36px,120px) 0 clamp(30px,1.25rem + 26px,50px);
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $margin-h2;
+  }
+
+  &__map-wrapper {
+    position: relative;
+  }
+
+  &__info {
+    position: absolute;
+    top: 0;
+    left: 90px;
+    max-width: 389px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.9);
+    padding: clamp(20px,1.25rem + 16px,40px) clamp(10px,1.875rem + 4px,40px);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(20px,0.625rem + 18px,30px);
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      gap: clamp(10px,0.625rem + 8px,20px);
+
+      &-title {
+        display: flex;
+        gap: clamp(5px,0.313rem + 4px,10px);
+      }
+
+      &-descr {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+    }
+
+    svg {
+      width: clamp(20px,0.625rem + 18px,30px) !important;
+      height: clamp(20px,0.625rem + 18px,30px) !important;
+    }
+
+    a {
+      @include p();
+    }
+  }
+
+  &__map {
+    height: 536px;
+  }
+}

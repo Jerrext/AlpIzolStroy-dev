@@ -1,4 +1,13 @@
 <footer class="footer">
+  <div class="container">
+    <div class="footer__wrapper">
+      <a href="index.html" class="footer__company">АльпИзолСтрой</a>
+      <div class="footer__right">
+        <a href="#">Политика обработки персональных данных</a>
+        <p>Создание сайта: <a href="https://artcly.by/">ArtCly.by</a></p>
+      </div>
+    </div>
+  </div>
   <div class="popup-view popup">
     <div class="popup-view__overlay popup__overlay"></div>
     <div class="popup-view__close popup__close">
@@ -10,5 +19,41 @@
     <div class="popup-view__img-wrapper">
       <img src="" class="popup-view__img">
     </div>
+  </div>
+  <div class="popup-call popup">
+    <div class="popup-call__overlay popup__overlay"></div>
+    <div class="popup-call__wrapper popup__wrapper">
+      <div class="popup-call__close popup__close">
+        <svg width="47" height="37" viewBox="0 0 47 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.60938 0.0625L40.8434 32.943L37.1507 36.5964L3.91671 3.71589L7.60938 0.0625Z" fill="#F48919"/>
+          <path d="M37.1506 0.0625L3.91662 32.943L7.60928 36.5964L40.8433 3.71589L37.1506 0.0625Z" fill="#F48919"/>
+        </svg>
+      </div>
+      <form action="" class="popup-call__form">
+        <div class="popup-call__form-text">
+          <h2>Заказать звонок</h2>
+          <p>Оставьте Ваши контактные данные <br>и мы свяжемся с Вами в ближайшее время </p>
+        </div>
+        <div class="popup-call__form-item">
+          <input type="text" placeholder="Имя" class="input">
+          <input type="tel" placeholder="+375 (__) _______" class="input" value="+375">
+        </div>
+        <div class="popup-call__form-item">
+          <div class="checkbox">
+            <input name="personalData" id="personalData" type="checkbox" />
+            <div class="customCheckbox">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.32184 13.0814L4.42224 10.3219C4.266 10.1732 4.05409 10.0897 3.83313 10.0897C3.61217 10.0897 3.40026 10.1732 3.24402 10.3219C3.08778 10.4706 3 10.6723 3 10.8825C3 10.9867 3.02155 11.0898 3.06342 11.186C3.10529 11.2822 3.16665 11.3696 3.24402 11.4432L6.73691 14.7674C7.0628 15.0775 7.58924 15.0775 7.91513 14.7674L16.756 6.35355C16.9122 6.20485 17 6.00318 17 5.79289C17 5.5826 16.9122 5.38093 16.756 5.23223C16.5997 5.08354 16.3878 5 16.1669 5C15.9459 5 15.734 5.08354 15.5778 5.23223L7.32184 13.0814Z" fill="#294EBC"/>
+              </svg>
+            </div>
+            <label for="personalData" class="checkbox-label">Даю согласие на обработку <a href="#">персональных данных</a></label>
+          </div>
+          <button type="submit" class="btn">Отправить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="popup-thanks popup">
+    <div class="popup-thanks__overlay popup__overlay"></div>
   </div>
 </footer>
