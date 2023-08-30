@@ -13,7 +13,7 @@
   }
 
   &__wrapper {
-    padding: clamp(50px,4.375rem + 36px,120px);
+    padding: clamp(50px,4.375rem + 36px,120px) 0;
     display: flex;
     flex-direction: column;
     gap: $margin-h2;

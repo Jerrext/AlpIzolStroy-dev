@@ -47,6 +47,10 @@
 
     a {
       @include p();
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 

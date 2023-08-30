@@ -35,25 +35,38 @@
           <p>Оставьте Ваши контактные данные <br>и мы свяжемся с Вами в ближайшее время </p>
         </div>
         <div class="popup-call__form-item">
-          <input type="text" placeholder="Имя" class="input">
-          <input type="tel" placeholder="+375 (__) _______" class="input" value="+375">
+          <div>
+            <input type="text" placeholder="Имя" class="input" id="name2">
+            <p class="question-form__name2-error error"></p>
+          </div>
+          <div>
+            <input type="tel" placeholder="+375 (__) _______" class="input" id="tel2" value="+375">
+            <p class="question-form__tel2-error error"></p>
+          </div>
         </div>
         <div class="popup-call__form-item">
-          <div class="checkbox">
-            <input name="personalData" id="personalData" type="checkbox" />
-            <div class="customCheckbox">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7.32184 13.0814L4.42224 10.3219C4.266 10.1732 4.05409 10.0897 3.83313 10.0897C3.61217 10.0897 3.40026 10.1732 3.24402 10.3219C3.08778 10.4706 3 10.6723 3 10.8825C3 10.9867 3.02155 11.0898 3.06342 11.186C3.10529 11.2822 3.16665 11.3696 3.24402 11.4432L6.73691 14.7674C7.0628 15.0775 7.58924 15.0775 7.91513 14.7674L16.756 6.35355C16.9122 6.20485 17 6.00318 17 5.79289C17 5.5826 16.9122 5.38093 16.756 5.23223C16.5997 5.08354 16.3878 5 16.1669 5C15.9459 5 15.734 5.08354 15.5778 5.23223L7.32184 13.0814Z" fill="#294EBC"/>
-              </svg>
+          <div>
+            <div class="checkbox">
+              <input name="personalData" id="personalData2" type="checkbox" />
+              <div class="customCheckbox">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.32184 13.0814L4.42224 10.3219C4.266 10.1732 4.05409 10.0897 3.83313 10.0897C3.61217 10.0897 3.40026 10.1732 3.24402 10.3219C3.08778 10.4706 3 10.6723 3 10.8825C3 10.9867 3.02155 11.0898 3.06342 11.186C3.10529 11.2822 3.16665 11.3696 3.24402 11.4432L6.73691 14.7674C7.0628 15.0775 7.58924 15.0775 7.91513 14.7674L16.756 6.35355C16.9122 6.20485 17 6.00318 17 5.79289C17 5.5826 16.9122 5.38093 16.756 5.23223C16.5997 5.08354 16.3878 5 16.1669 5C15.9459 5 15.734 5.08354 15.5778 5.23223L7.32184 13.0814Z" fill="#294EBC"/>
+                </svg>
+              </div>
+              <label for="personalData" class="checkbox-label">Даю согласие на обработку <a href="#">персональных данных</a></label>
             </div>
-            <label for="personalData" class="checkbox-label">Даю согласие на обработку <a href="#">персональных данных</a></label>
+            <p class="question-form__checkbox2-error error"></p>
           </div>
-          <button type="submit" class="btn">Отправить</button>
+          <button type="submit" class="btn" id="call-submit">Отправить</button>
         </div>
       </form>
     </div>
   </div>
   <div class="popup-thanks popup">
     <div class="popup-thanks__overlay popup__overlay"></div>
+    <div class="popup-thanks__wrapper popup__wrapper">
+      <h2>Спасибо за Вашу заявку!</h2>
+      <p>Мы свяжемся с Вами в ближайшее время</p>
+    </div>
   </div>
 </footer>

@@ -1,5 +1,5 @@
 .testimonial {
-  padding: $vertical-padding;
+  padding: $vertical-padding 0;
 
   &__wrapper {
     display: flex;
@@ -21,6 +21,7 @@
 
     &-container {
       position: relative;
+      padding: 0 50px;
     }
 
     &-button-next,
@@ -43,8 +44,12 @@
       }
     }
 
+    &-button-prev {
+      left: 0;
+    }
+
     &-button-next {
-      transform: rotate(180deg);
+      transform: rotate(180deg) translateY(+50%);
       right: 0;
     }
 

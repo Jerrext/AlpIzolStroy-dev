@@ -29,6 +29,10 @@
       color: $text-color-white;
       font-size: clamp(10px,0.25rem + 9.2px,14px);
     }
+
+    a:hover {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -79,7 +83,6 @@
     top: 50%;
     transform: translate(-50%, -50%);
     max-height: 90vh;
-    height: 100%;
     max-width: 80vw;
     object-fit: contain;
     object-position: center;
@@ -123,6 +126,7 @@
     display: flex;
     flex-direction: column;
     gap: clamp(20px,0.625rem + 18px, 30px);
+    max-width: 375px;
 
     &-text {
       p {
@@ -151,5 +155,15 @@
         fill: $color-orange-light;
       }
     }
+  }
+}
+
+.popup-thanks {
+  &__wrapper {
+    height: 368px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
   }
 }

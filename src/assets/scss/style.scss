@@ -93,4 +93,12 @@ button {
   }
 }
 
+.error {
+  color: $color-error;
+  font-size: 10px;
+  margin-top: 5px;
+  display: none;
+}
+
 @import 'blocks/modules';
+@import 'media';
